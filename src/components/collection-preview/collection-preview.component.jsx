@@ -11,7 +11,8 @@ const CollectionPreview = ({ title, items }) => (
         .filter((item, idx) => idx < 4)
         .map(({ id, ...itemProps }) => (
           <CollectionItem key={id} {...itemProps} />
-        ))}
+        )
+        )}
     </div>
   </div>
 );
