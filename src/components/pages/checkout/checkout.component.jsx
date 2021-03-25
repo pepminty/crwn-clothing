@@ -8,6 +8,7 @@ import {
 import "./checkout.styles.scss";
 import { createStructuredSelector } from "reselect";
 import CheckOutItem from "../../checkout-item/checkout-item.component";
+import StripeCheckoutButton from '../../stripe-button/stripe-button.component';
 
 const CheckoutPage = ({cartItems, total}) => (
   <div className="checkout-page">
@@ -32,6 +33,7 @@ const CheckoutPage = ({cartItems, total}) => (
         cartItems.map(cartItem => (<CheckOutItem key={cartItem.id} cartItem={cartItem}></CheckOutItem>))
     }
     <div className='total'></div>
+    <StripeCheckoutButton price={total}/>
   </div>
 );
 
